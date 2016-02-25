@@ -1,0 +1,15 @@
+; Programa que lee los elementos la cinta de entrada hasta
+; que encuentre un 0 y escribe la suma de todos los elementos 
+; leídos a la cinta de salida
+			READ 1
+                        LOAD =0
+			STORE 2
+	bucle	:       LOAD 1
+			JZERO fin
+			LOAD 2
+			ADD 1
+			STORE 2
+			READ 1
+			JUMP bucle
+	fin	:	WRITE 2
+                        HALT

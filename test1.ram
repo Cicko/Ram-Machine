@@ -1,0 +1,9 @@
+; Programa que lee los elementos la cinta de entrada hasta
+; que encuentre un 0 y copia los valores leídos a la cinta
+; de salida (el valor 0 no se copia)
+	lee : read 1
+			load  1
+			jzero fin
+			write  1
+			jump lee  ;Caca de perro
+	fin :	halt  ;caca de ñame

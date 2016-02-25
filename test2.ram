@@ -1,0 +1,29 @@
+; Programa que reconoce el lenguaje formado por las
+; palabras que tienen el mismo n�mero de 1 y 2.
+; Las palabras finalizan con el n�mero 0.
+; Los �nicos s�mbolos posibles de entrada son 0, 1 y 2.
+; La cinta de salida contendr� un 1 si se reconoce la palabra
+; y un 0 si no pertenece al lenguaje
+			LOAD =0
+			STORE 2
+			READ 1
+	while	:	LOAD 1
+			JZERO end_wh
+			LOAD 1
+			SUB =1
+			JZERO else
+			LOAD 2
+			SUB =1
+			STORE 2
+			JUMP end_if
+	else	:	LOAD 2
+			ADD =1
+			STORE 2
+	end_if	:	READ 1
+			JUMP while
+	end_wh	:	LOAD 2
+			JZERO iguales
+			WRITE =0
+			JUMP fin
+	iguales	:	WRITE =1
+	fin	:	HALT

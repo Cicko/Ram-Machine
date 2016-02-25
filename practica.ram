@@ -1,0 +1,24 @@
+; Programa que lee un número n, calcula n^n y vuelca el contenido
+; en la cinta de salida
+        READ 1      ;--> Leo de la cinta de entrada y lo pongo en el registro R1
+        LOAD 1      ;--> Cargar el acumulador con el valor guardado en R1
+        JGTZ else   ;--> Es el contrario de n <= 0
+        WRITE =0    ;--> Escribir un 0 en la cinta de salida
+        HALT
+else:       LOAD 1
+        STORE 2     ;--> X en R2
+        LOAD 1
+        SUB =1
+        STORE 3     ;--> Contador en R3
+while:      LOAD 3
+        JGTZ bucle
+        JUMP fin_while
+bucle:      LOAD 2      ;--> Acumulador = X
+        MUL 1       ;--> Acumulador + N
+        STORE 2     ;--> R2 = Acumulador
+        LOAD 3
+        SUB =1
+        STORE 3
+        JUMP while
+fin_while:  WRITE 2
+        HALT
