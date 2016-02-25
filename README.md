@@ -11,7 +11,7 @@ To compile the __Ram Machine__ open a *terminal* and put
 
 `> make`
 
-It will compile all necessary files and create an executable. To execute correctly the Ram Machine you must indicates four parameters:
+It will compile all necessary files and create an executable (__RamMachine__). To execute correctly the Ram Machine you must indicates four parameters:
 + [input]
  - Indicates the file name of the input tape.
 + [output]
@@ -24,3 +24,5 @@ It will compile all necessary files and create an executable. To execute correct
 Example:
 
 `> /RamMachine input1.txt output.txt test1.ram 5`
+
+This example will use *input1.txt* as input, create *output.txt* if it doesn't exists to write in, use *test1.ram* to decide what to do with the input data to output the result and it will create a memory with 5 registers.
